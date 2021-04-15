@@ -1,0 +1,433 @@
+*, ::after, ::before{
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  background: #ffffff;
+  height: 100vh;
+  overflow-y:hidden;
+  font-size: 16px;
+  color: #DFDFDF;
+}
+
+.container {
+  width: 100%;
+  max-width: 1336px;
+  margin: 0 auto;
+}
+
+
+.header{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 1920px;
+  padding-left: 110px;
+  padding-right: 110px;
+ margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.logo-image {
+  height: 50px;
+  width: 165px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-link {
+  text-decoration: none;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+  color: #3D3D3D;
+  text-transform: uppercase;
+}
+
+.navigation-item { 
+  margin-right: 70px;
+}
+
+.navigation-item:last-child { 
+  margin-right: 0;
+}
+
+.about__title {
+  margin-top: 99px;
+  color: #3D3D3D;
+  font-size: 34px;
+  font-weight: bold;
+  letter-spacing: -0.68px;
+  color: #3D3D3D;
+}
+
+.about__text {
+  margin-top: 78px;
+  margin-bottom: 130px;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  color: #3D3D3D;
+}
+
+.active-link {
+  position: relative;
+}
+
+.active:before {
+  position: absolute;
+  top: 38px;
+  left: 45%;
+  content: "";
+  background-color: #FDD000; 
+  background-size: cover;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.left__block {
+  background-image: url(img/Artboard.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1225px;
+  height: 100vh;
+}
+
+.right__block {
+  background-color: #272829;
+  width: 700px;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.general__title {
+  text-align: right;
+  font-size: 50px;
+  letter-spacing: 3.5px;
+  color: #FDD000;
+  text-transform: uppercase;
+  padding-top: 190px;
+  margin-right: 33px;
+}
+
+.secondary__title {
+  text-align: right;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+  color: #DFDFDF;
+  margin-top: 44px;
+  margin-right: 33px;
+}
+
+/* calen*/
+
+#calendar {
+  width: 465px;
+  height: 490px;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  margin-top: 209px;
+  margin-left: 122px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pt-48 {
+  padding-top: 48px;
+}
+
+.line::after {
+  content: '';
+  background-color: #FFFFFF;
+  opacity: .43;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+#calendar thead tr:last-child {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(2) {
+  letter-spacing: 0px;
+  color: #DFDFDF;
+  text-transform: uppercase;
+  font-size: 19px;
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+
+#calendar tbody td {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #DFDFDF;
+  font-weight: 500;
+}
+
+#calendar tbody td.today {
+  background: #FDD000;
+  color: #3D3D3D;
+}
+
+/* Responsive */
+@media (max-width: 1600px) {
+  #calendar {
+    margin-top: 140px;
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navigation-link {
+    font-size: 26px;
+  }
+
+  .general__title {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+
+  .secondary__title {
+    font-size: 26px;
+  }
+
+  #calendar {
+    margin-top: 100px;
+    margin-left: 40px;
+  }
+  
+  .left__block {
+    width: 90%;
+  }
+  .right__block {
+    width: 90%;
+  }
+}
+
+@media (max-width: 950px) {
+  #calendar {
+    margin-top: 80px;
+    margin-left: 30px;
+  }
+  
+  .left__block {
+    width: 80%;
+  }
+  .right__block {
+    width: 80%;
+  }
+
+  .general__title {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .secondary__title,.navigation-link {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 786px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #calendar {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  
+  .left__block {
+    width: 70%;
+  }
+  .right__block {
+    width: 70%;
+  }
+
+  .general__title {
+    font-size: 18px;
+    padding-top: 180px;
+    margin-right: 15px;
+  }
+
+  .secondary__title {
+    font-size: 14px;
+    margin-right: 15px;
+  }
+
+  .secondary__title,.navigation-link {
+    font-size: 20px;
+  }
+  .pb-20 {
+    padding-bottom: 10px;
+  }
+  .pt-48 {
+    padding-top: 28px;
+  }
+ /* body {
+    overflow-y:visible;
+  } */
+
+  .active:before {
+    top: 30px;
+    left: 45%;
+    height: 10px;
+    width: 10px;
+  }
+  .about__title {
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about__text {
+    margin-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .left__block{
+    width: 100%;
+  }
+  .right__block {
+    width: 100%;
+  }
+  #calendar {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+  body {
+    overflow-y:visible;
+  }
+
+  .general__title {
+    font-size: 28px;
+    padding-top: 180px;
+    margin-right: 15px;
+  }
+
+  .secondary__title {
+    font-size: 24px;
+    margin-right: 15px;
+  }
+  .navigation-item{
+    margin-right: 30px;
+  }
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+
+@media (max-width: 460px) {
+  #calendar {
+    width: 395px;
+    height: 420px;
+  }
+  .header {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 440px) {
+  #calendar {
+    width: 350px;
+    height: 380px;
+  }
+
+  .header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .navigation-item {
+    margin-right: 10px;
+  }
+  .secondary__title, .navigation-link {
+    font-size: 18px;
+}
+}
+
+@media (max-width: 350px) {
+  #calendar {
+    width: 320px;
+    height: 350px;
+  }
+
+  .header {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .navigation-item {
+    margin-right: 5px;
+  }
+  .secondary__title, .navigation-link {
+    font-size: 14px;
+}
+}
